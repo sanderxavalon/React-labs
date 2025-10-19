@@ -24,12 +24,7 @@ const weatherImages = {
 };
 
 const WeatherApp = () => {
-  const [data, setData] = useState({});
-  const [location, setLocation] = useState("");
-  const [loading, setLoading] = useState(false);
-
   // TODO: 為了讓 User 進來就有資料，進入時就要打API，預設地點是Taipei
-  useEffect(() => {}, []);
 
   // TODO: Event Handler 需要接收 Input 的值並且改變狀態
   const handleInputChange = (e) => {};
