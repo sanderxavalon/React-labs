@@ -2,6 +2,8 @@ import "./NewsModal.css";
 
 const NewsModal = () => {
   // TODO: 請完成 modal 的顯示機制
+  return null;
+
   return (
     <div className="modal-overlay">
       <div className="modal-content">
