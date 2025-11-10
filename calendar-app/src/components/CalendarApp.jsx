@@ -30,7 +30,6 @@ const CalendarApp = () => {
   const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
   const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
   const [selectedDate, setSelectedDate] = useState(currentDate);
-  const [showEventPopup, setShowEventPopup] = useState(false);
   const [events, setEvents] = useState([]);
   const [eventTime, setEventTime] = useState({ hours: "00", minutes: "00" });
   const [eventText, setEventText] = useState("");
@@ -47,14 +46,14 @@ const CalendarApp = () => {
 
   // TODO: 完成按下行事曆日期的行為
   // 只能選擇今天或未來的日期，不能選擇過去的日期
-  // 點選日期後會跳出新增事件的 modal
+  // 點選日期後會跳出新增事件的 popup
   const handleDayClick = (day) => {};
 
-  // TODO: 完成新增事件的行為
+  // TODO: 完成新增/編輯後，送出事件的行為
   // event的格式: { id, date: Date, time: "HH:MM", text: string }
   const handleEventSubmit = () => {};
 
-  // TODO: 完成編輯事件的行為
+  // TODO: 完成按下編輯按鈕後行為
   const handleEditEvent = (event) => {};
 
   // TODO: 完成刪除事件的行為
@@ -102,7 +101,8 @@ const CalendarApp = () => {
         </div>
       </div>
       <div className="events">
-        {showEventPopup && (
+        {/* TODO: 加上 popup 顯示狀態與控制邏輯 */}
+        {false && (
           <div className="event-popup">
             <div className="time-input">
               <div className="event-popup-time">時間</div>
@@ -135,7 +135,11 @@ const CalendarApp = () => {
             </button>
             <button
               className="close-event-popup"
-              onClick={() => setShowEventPopup(false)}
+              onClick={
+                {
+                  /* TODO: 加上 popup 顯示控制邏輯 */
+                }
+              }
             >
               <i className="bx bx-x"></i>
             </button>
